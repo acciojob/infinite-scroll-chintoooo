@@ -1,10 +1,8 @@
-//your code here!
-
-const list = document.getElementById("infinite-list");
+const list = document.getElementById("infi-list");
 
 let count = 1;
 
-// Function to create and append list items
+// Add initial 10 items
 function addListItems(num) {
   for (let i = 0; i < num; i++) {
     const item = document.createElement("li");
@@ -13,14 +11,13 @@ function addListItems(num) {
   }
 }
 
-// Add initial 10 items
 addListItems(10);
 
-// Detect when user scrolls to the bottom
+// Infinite scroll logic
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
-  const windowHeight = window.innerHeight;
   const scrollHeight = document.documentElement.scrollHeight;
+  const windowHeight = window.innerHeight;
 
   if (scrollTop + windowHeight >= scrollHeight - 5) {
     addListItems(2);

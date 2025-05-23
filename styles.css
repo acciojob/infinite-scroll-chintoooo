@@ -1,16 +1,16 @@
-#infi-list {
-  width: 200px;
-  height: 300px;
-  overflow: auto;
-
-  margin: 30px;
+body {
+  font-family: Arial, sans-serif;
   padding: 20px;
-  border: 10px solid black;
+  line-height: 1.6;
 }
-li {
-  padding: 10px;
+
+#infi-list {
   list-style-type: none;
+  padding: 0;
 }
-li:hover {
-  background: #ccc;
+
+#infi-list li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
 }
